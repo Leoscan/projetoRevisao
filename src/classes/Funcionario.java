@@ -1,7 +1,15 @@
 package classes;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
+
+import org.jdom.Document;
+import org.jdom.Element;
+import org.jdom.input.SAXBuilder;
+
+
+
 
 public class Funcionario extends Usuario {
 	private String nome;
@@ -9,7 +17,7 @@ public class Funcionario extends Usuario {
 	private String dtNasc;
 	
 	private List<Integer> HTrabalhadas = new ArrayList<Integer>();
-	private List<Integer> HValor = new ArrayList<Integer>();
+	private List<Float> HValor = new ArrayList<Float>();
 	
 	//construtores
 	public Funcionario(String user, String senha, String nome, String email, String dtNasc) {
@@ -17,6 +25,9 @@ public class Funcionario extends Usuario {
 		setNome(nome);
 		setEmail(email);
 		setDtNasc(dtNasc);
+	}
+	public Funcionario() {
+		
 	}
 	
 	
@@ -40,6 +51,28 @@ public class Funcionario extends Usuario {
 		this.dtNasc = dtNasc;
 	}
 
+	
+	//metodos
+	public void CriarVetores() {
+		Document doc = null;
+        SAXBuilder builder = new SAXBuilder();
+        try { 
+            doc = builder.build("src/xmlVetores/vetor.xml");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        Element config = doc.getRootElement();
+        List lista = config.getChildren("classes.Funcionario");
+
+       
+        for (Iterator iter = lista.iterator(); iter.hasNext();) {
+            Element element = (Element) iter.next();
+            HTrabalhadas.add(Integer.parseInt(element.getChildText("HTrabalhadas")));
+            HValor.add(Float.parseFloat(element.getChildText("HValor")));
+        }
+	}
+	
+	
 	//to string
 	@Override
 	public String toString() {
@@ -54,15 +87,14 @@ public class Funcionario extends Usuario {
 		builder.append("\n----------");
 		builder.append("\nVetor Horas Trabalhadas:\n");
 		for (Integer integer : HTrabalhadas) {
-			builder.append("|");
-			builder.append(HTrabalhadas);
-			builder.append("|");
+			builder.append(" | ");
+			builder.append(integer);
 		}
 		builder.append("\nVetor Valor Hora:\n");
-		for (Integer integer : HValor) {
-			builder.append("|");
-			builder.append(HValor);
-			builder.append("|");
+		for (Float
+			Float : HValor) {
+			builder.append(" | ");
+			builder.append(Float);
 		}
 		builder.append("\n----------");
 		return builder.toString();

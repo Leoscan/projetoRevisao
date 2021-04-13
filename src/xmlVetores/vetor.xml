@@ -1,0 +1,30 @@
+<list>
+  <classes.Funcionario>
+    <HTrabalhadas>137</HTrabalhadas>
+    <HValor>123.76</HValor>
+  </classes.Funcionario>
+  <classes.Funcionario>
+    <HTrabalhadas>54</HTrabalhadas>
+    <HValor>99.56</HValor>
+  </classes.Funcionario>
+  <classes.Funcionario>
+    <HTrabalhadas>127</HTrabalhadas>
+    <HValor>30</HValor>
+  </classes.Funcionario>
+  <classes.Funcionario>
+    <HTrabalhadas>88</HTrabalhadas>
+    <HValor>29</HValor>
+  </classes.Funcionario>
+  <classes.Funcionario>
+    <HTrabalhadas>71</HTrabalhadas>
+    <HValor>99</HValor>
+  </classes.Funcionario>
+  <classes.Funcionario>
+    <HTrabalhadas>12</HTrabalhadas>
+    <HValor>2</HValor>
+  </classes.Funcionario>
+  <classes.Funcionario>
+    <HTrabalhadas>59</HTrabalhadas>
+    <HValor>77.98</HValor>
+  </classes.Funcionario>
+</list>

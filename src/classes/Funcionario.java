@@ -50,7 +50,19 @@ public class Funcionario extends Usuario {
 	public void setDtNasc(String dtNasc) {
 		this.dtNasc = dtNasc;
 	}
-
+	public List<Integer> getHTrabalhadas() {
+		return HTrabalhadas;
+	}
+	public void setHTrabalhadas(List<Integer> hTrabalhadas) {
+		HTrabalhadas = hTrabalhadas;
+	}
+	public List<Float> getHValor() {
+		return HValor;
+	}
+	public void setHValor(List<Float> hValor) {
+		HValor = hValor;
+	}
+	
 	
 	//metodos
 	public void CriarVetores() {
@@ -64,7 +76,6 @@ public class Funcionario extends Usuario {
         Element config = doc.getRootElement();
         List lista = config.getChildren("classes.Funcionario");
 
-       
         for (Iterator iter = lista.iterator(); iter.hasNext();) {
             Element element = (Element) iter.next();
             HTrabalhadas.add(Integer.parseInt(element.getChildText("HTrabalhadas")));

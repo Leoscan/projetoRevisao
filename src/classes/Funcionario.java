@@ -26,9 +26,6 @@ public class Funcionario extends Usuario {
 		setEmail(email);
 		setDtNasc(dtNasc);
 	}
-	public Funcionario() {
-		
-	}
 	
 	
 	//get e set

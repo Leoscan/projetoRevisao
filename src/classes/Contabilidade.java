@@ -3,19 +3,19 @@ package classes;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Empresa {
+public class Contabilidade {
 	private String nome;
 	private String ano;
 	private Funcionario funcionario;
 	private List<Double> VSalarios = new ArrayList<Double>();
 	
 	
-	public Empresa(String nome, String ano, Funcionario funcionario) {
+	public Contabilidade(String nome, String ano, Funcionario funcionario) {
 		setNome(nome);
 		setAno(ano);
 		setFuncionario(funcionario);
 	}
-	public Empresa() {
+	public Contabilidade() {
 		
 	}
 	
@@ -46,13 +46,30 @@ public class Empresa {
 	}
 	
 	//metodos
-	public List<Double> criaVSalarios() {
+	public void criaVSalarios() {
 		for(int x = 0; x < funcionario.getHTrabalhadas().size(); x++) {
 			double salario = funcionario.getHTrabalhadas().get(x) * funcionario.getHValor().get(x);	
 			VSalarios.add(salario);
 		}
-		return VSalarios;
+		
 	}
-	
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("----------");
+		builder.append("\nNome da Empresa: ");
+		builder.append(nome);
+		builder.append(", Since:");
+		builder.append(ano);
+		builder.append(funcionario);
+		int x = 1;
+		for (Double double1 : VSalarios) {
+			builder.append("\nSalário "+x+": ");
+			builder.append(double1);
+			x++;
+		}
+		builder.append("\n----------");
+		return builder.toString();
+	}
 	
 }

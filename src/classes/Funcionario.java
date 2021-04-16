@@ -59,8 +59,8 @@ public class Funcionario extends Usuario {
 	public void setHValor(List<Float> hValor) {
 		HValor = hValor;
 	}
-	
-	
+
+
 	//metodos
 	public void CriarVetores() {
 		Document doc = null;

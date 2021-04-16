@@ -1,7 +1,7 @@
 <list>
   <classes.Funcionario>
     <HTrabalhadas>137</HTrabalhadas>
-    <HValor>123.25</HValor>
+    <HValor>123</HValor>
   </classes.Funcionario>
   <classes.Funcionario>
     <HTrabalhadas>54</HTrabalhadas>
@@ -13,7 +13,7 @@
   </classes.Funcionario>
   <classes.Funcionario>
     <HTrabalhadas>88</HTrabalhadas>
-    <HValor>29</HValor>
+    <HValor>29.25</HValor>
   </classes.Funcionario>
   <classes.Funcionario>
     <HTrabalhadas>71</HTrabalhadas>
@@ -29,6 +29,42 @@
   </classes.Funcionario>
   <classes.Funcionario>
     <HTrabalhadas>77</HTrabalhadas>
-    <HValor>98.25</HValor>
+    <HValor>98.5</HValor>
+  </classes.Funcionario>
+  <classes.Funcionario>
+    <HTrabalhadas>77</HTrabalhadas>
+    <HValor>98.5</HValor>
+  </classes.Funcionario>
+  <classes.Funcionario>
+    <HTrabalhadas>77</HTrabalhadas>
+    <HValor>98.5</HValor>
+  </classes.Funcionario>
+  <classes.Funcionario>
+    <HTrabalhadas>77</HTrabalhadas>
+    <HValor>98.5</HValor>
+  </classes.Funcionario>
+  <classes.Funcionario>
+    <HTrabalhadas>77</HTrabalhadas>
+    <HValor>98.5</HValor>
+  </classes.Funcionario>
+  <classes.Funcionario>
+    <HTrabalhadas>77</HTrabalhadas>
+    <HValor>98.5</HValor>
+  </classes.Funcionario>
+  <classes.Funcionario>
+    <HTrabalhadas>77</HTrabalhadas>
+    <HValor>98.5</HValor>
+  </classes.Funcionario>
+  <classes.Funcionario>
+    <HTrabalhadas>77</HTrabalhadas>
+    <HValor>98.5</HValor>
+  </classes.Funcionario>
+  <classes.Funcionario>
+    <HTrabalhadas>77</HTrabalhadas>
+    <HValor>98.5</HValor>
+  </classes.Funcionario>
+  <classes.Funcionario>
+    <HTrabalhadas>77</HTrabalhadas>
+    <HValor>98.5</HValor>
   </classes.Funcionario>
 </list>

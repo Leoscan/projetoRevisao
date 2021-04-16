@@ -1,6 +1,8 @@
 package classes;
 
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Comparator;
 import java.util.List;
 
 public class Contabilidade {
@@ -53,6 +55,73 @@ public class Contabilidade {
 		}
 		
 	}
+	public double mediaSalarial() {
+		double total = 0;
+		int x = 0;
+		for (Double indice : VSalarios) {
+			total = total + indice;
+			x++;
+		}
+		System.out.println("Valor Total de Salário: "+total);
+		return total/x;
+	}
+	
+	public double[] maiorSalario(int quantidade) {
+		double MaSalario[] = new double[quantidade];
+		VSalarios.sort(Comparator.reverseOrder());
+		int x = 0;
+		for (Double Maior : VSalarios) {
+			if (x <= (quantidade-1)) {
+				MaSalario[x] = Maior;
+			}
+			x++;
+		}
+		
+		return MaSalario;
+	}
+	
+	public double[] menorSalario(int quantidade) {
+		double MeSalario[] = new double[quantidade];
+		VSalarios.sort(Comparator.reverseOrder());
+		VSalarios.sort(null);
+		int x = 0;
+		for (Double Maior : VSalarios) {
+			if (x <= (quantidade-1)) {
+				MeSalario[x] = Maior;
+			}
+			x++;
+		}
+		
+		return MeSalario;
+	}
+	
+	public int mesesTrabalhados() {
+		return VSalarios.size();  
+	}
+	
+	public int anoContribui() {
+		int ano = Calendar.getInstance().get(Calendar.YEAR);
+		ano = ano + 35;
+		return ano - (mesesTrabalhados()/12);
+	}
+	
+	public int anoNasc() {
+		String[] textoSeparado = funcionario.getDtNasc().split("/");
+		return Integer.parseInt(textoSeparado[2]);
+	}
+	
+	public int iMinima(boolean seMasculino) {
+		
+		int ano = 0;
+		if(seMasculino) {
+			ano =  anoNasc() + 65;
+		} else {
+			ano = anoNasc() + 62;
+		}
+		return ano;
+	}
+
+	
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
